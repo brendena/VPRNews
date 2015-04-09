@@ -754,7 +754,7 @@ templates['playingNow'] = template({"1":function(depth0,helpers,partials,data) {
                     }
                 }
             }
-
+            //!!!!!!!!!!!!
             httpRequest.onreadystatechange = function() {
                 if (httpRequest.readyState === 4 && httpRequest.status === 200) {
                     eventHandler();
@@ -766,8 +766,9 @@ templates['playingNow'] = template({"1":function(depth0,helpers,partials,data) {
                 errorHandler(httpRequest.status);
             };
             sendRequest();
+            //!!!!!!!!!!!!
         },
-
+        //!!!!!!!!!!!!
         sendRequest = function() {
             if ("onLine" in navigator) {
                 if (navigator.onLine) {
@@ -782,6 +783,7 @@ templates['playingNow'] = template({"1":function(depth0,helpers,partials,data) {
                 httpRequest.open('GET', url());
                 httpRequest.send();
             }
+            //!!!!!!!!!!!!
         },
 
         createDict = function(data) {
@@ -854,6 +856,7 @@ templates['playingNow'] = template({"1":function(depth0,helpers,partials,data) {
         updateInterval = window.setInterval(function() {
             sendRequest();
         }, 60 * 1000);
+        //!!!!!!!!!!!!
         errorServer = function (errorValue) {
             var error = document.getElementById('error');
             error.style.display = "block";
@@ -870,7 +873,7 @@ templates['playingNow'] = template({"1":function(depth0,helpers,partials,data) {
                 errorMessage += "  The app is having trouble displaying schedule data at the moment. We apologize for the inconvenience.";
             errorText.innerHTML = errorMessage;
         }
-
+        //!!!!!!!!!!!!
         callComposer(url, updateTemplate, errorServer);
 
 })();
