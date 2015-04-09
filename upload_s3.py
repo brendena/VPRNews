@@ -72,9 +72,11 @@ def set_metadata():
         ext = os.path.splitext(filename)[1]
         if not ext:
             ext = '.html'
+        #!!!!!!!!
         web_path = filename.split('build\\')[1]
         s = "\\"
         web_path = web_path.replace(s,"/")
+        #!!!!!!!!
         # Set expires for HTML, remove extension if not index
         if ext == '.html':
             if 'index' not in web_path:
@@ -96,10 +98,11 @@ def set_metadata():
             k.set_metadata('Content-Type', mimetypes.types_map[ext])
         except KeyError:
             print ext
+            #!!!!!!!!
             if ext != ".ttf":
                 print "bad code " + web_path
                 continue
-
+            #!!!!!!!!
         etag_hash = hashlib.sha1(f + str(time.time())).hexdigest()
         k.set_metadata('ETag', etag_hash)
         k.set_contents_from_filename(f)
