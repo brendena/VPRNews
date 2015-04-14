@@ -2,6 +2,7 @@ arrow==0.4.4
 beautifulsoup4==4.3.2
 boto==2.18.0
 Flask==0.10.1
+Frozen-Flask==0.11
 gdata==2.0.18
 itsdangerous==0.24
 Jinja2==2.7.3
@@ -11,22 +12,3 @@ python-google-spreadsheet==2.0.0
 requests==2.2.1
 six==1.7.3
 Werkzeug==0.9.6
-//installed
-
-//all 
-Flask==0.10.1
--e git+ssh://git@github.com/SimonSapin/Frozen-Flask.git@508cb0ae8e74cff1411a5bb78dc386beb727dfec#egg=Frozen_Flask-dev
-Jinja2==2.7.3
-MarkupSafe==0.23
-http://effbot.org/downloads/Imaging-1.1.7.tar.gz
-Werkzeug==0.9.6
-arrow==0.4.4
-beautifulsoup4==4.3.2
-boto==2.18.0
-gdata==2.0.18
-itsdangerous==0.24
-python-dateutil==2.2
-python-google-spreadsheet==2.0.0
-requests==2.2.1
-six==1.7.3
-wsgiref==0.1.2
