@@ -9,8 +9,6 @@ from flask_frozen import Freezer
 if len(sys.argv) > 1 and sys.argv[1] == 'freeze':
     freezer = Freezer(app)
     freezer.freeze()
-
-elif len(sys.argv) > 1 and sys.argv[1] == 'upload':
     set_metadata()
 #!!!!!!!!
 else:
